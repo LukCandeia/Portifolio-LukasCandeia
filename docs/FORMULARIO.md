@@ -1,8 +1,6 @@
 # Formulário de contato
 
-A integração de envio ainda não está incluída nesta versão do repositório. O formulário permanece desabilitado. Este documento descreve a configuração e o comportamento previstos para a integração.
-
-O endpoint escolhido é `https://formspree.io/f/xdegwoao`. A integração usará `src/config.js` para essa configuração. O destinatário pretendido é **Lukasnathan62@gmail.com** e deve ser configurado no painel do Formspree. O recebimento na caixa de entrada ainda precisa ser confirmado.
+O endpoint `https://formspree.io/f/xdegwoao` está em `src/config.js`. O destinatário pretendido é **Lukasnathan62@gmail.com** e deve ser configurado no painel do Formspree. O recebimento na caixa de entrada ainda precisa ser confirmado.
 
 ## Comportamento
 
@@ -16,4 +14,4 @@ O endpoint é público. Senhas e chaves administrativas não pertencem ao códig
 
 ## Verificação
 
-A integração incluirá o comando `npm test` e testes com respostas simuladas para conferir o envio sem mandar mensagens reais. Antes de publicar, envie uma mensagem de teste e confirme o recebimento no endereço correto. Confira os limites e as opções de proteção contra spam na conta do serviço.
+`npm test` usa respostas simuladas para conferir o envio sem mandar mensagens reais. Antes de publicar, envie uma mensagem de teste e confirme o recebimento no endereço correto. Confira os limites e as opções de proteção contra spam na conta do serviço.
