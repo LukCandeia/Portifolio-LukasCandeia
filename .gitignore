@@ -12,3 +12,5 @@ artifacts/
 /docs/PROJETO.md
 /docs/REVISAO.md
 /docs/VALIDACAO.md
+
+dist/
