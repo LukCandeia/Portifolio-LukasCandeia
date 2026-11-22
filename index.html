@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Lukas Candeia. Engenheiro de software em formação com foco em backend, APIs e aplicações web. Em busca de oportunidades de estágio e júnior."
+    />
+    <meta name="theme-color" content="#efefed" />
+    <title>Lukas Candeia | Engenheiro de software em formação</title>
+    <link rel="icon" href="./public/favicon.svg?v=lk" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Pular para o conteúdo</a>
+    <header class="header wrap">
+      <a class="brand" href="#home" aria-label="Lukas Candeia"
+        ><span class="brand-symbol">Lk<span>↗</span></span
+        ><span
+          >Lukas Candeia<span class="brand-sub" data-i18n="portfolio">Portfólio / 2026</span></span
+        ></a
+      >
+      <nav aria-label="Principal" id="navigation">
+        <a href="#projects" data-i18n="projects">Projetos</a
+        ><a href="#about" data-i18n="about">Sobre</a
+        ><a href="#experience" data-i18n="experiences">Experiências</a
+        ><a href="#contact" data-i18n="contact">Contato</a>
+      </nav>
+      <div class="controls">
+        <div class="language" role="group" aria-label="Idioma">
+          <button data-lang="pt" aria-pressed="true">PT</button><span>/</span
+          ><button data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Ativar modo escuro">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path d="M20 14.2A8.5 8.5 0 0 1 9.8 4a8.5 8.5 0 1 0 10.2 10.2Z" />
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main id="main" class="wrap">
+      <section class="bento" id="home" aria-label="Apresentação">
+        <div class="glass introduction">
+          <div class="intro-top">
+            <span class="pill"
+              ><span class="status-dot"></span
+              ><span data-i18n="available">Aberto a oportunidades</span></span
+            ><span class="tiny">&lt;/&gt;</span>
+          </div>
+          <div>
+            <p class="hello" data-i18n="hello">Olá, eu sou o Lukas.</p>
+            <h1 data-i18n="headline">Da interface<br />à lógica por trás.</h1>
+            <p class="intro-copy" data-i18n="intro">
+              Sou engenheiro de software em formação na PUC, com foco em backend. Desenvolvo
+              aplicações web e aprendo enquanto construo meus projetos.
+            </p>
+          </div>
+          <div class="intro-bottom">
+            <a class="button primary" href="#projects"
+              ><span data-i18n="viewProjects">Conheça meus projetos</span
+              ><span aria-hidden="true">↗</span></a
+            ><span class="small" data-i18n="opportunity">Estágio & júnior</span>
+          </div>
+        </div>
+        <div class="glass identity">
+          <div class="identity-top">
+            <span data-i18n="inProgress">Sempre em construção</span
+            ><span aria-hidden="true">✳</span>
+          </div>
+          <div class="monogram" aria-hidden="true">Lk<span>.</span></div>
+          <div class="identity-bottom">
+            <span>Lukas Candeia</span><span data-i18n="developer">Engenharia de Software</span>
+          </div>
+        </div>
+        <div class="glass status-card">
+          <span class="card-label" data-extra="status">Status</span>
+          <p>
+            <span class="status-dot"></span
+            ><strong data-extra="work">Disponível para trabalho</strong>
+          </p>
+        </div>
+        <div class="glass daily-card">
+          <div class="daily-heading">
+            <div>
+              <span class="card-label" data-extra="dailyHint">Ferramentas do dia a dia</span>
+              <h2 data-extra="daily">Minhas ferramentas</h2>
+            </div>
+            <button
+              class="carousel-pause"
+              hidden
+              disabled
+              type="button"
+              aria-label="Pausar carrossel"
+            >
+              Ⅱ
+            </button>
+          </div>
+          <div class="carousel">
+            <button
+              class="carousel-arrow previous"
+              hidden
+              disabled
+              type="button"
+              aria-label="Ferramenta anterior"
+            >
+              ‹
+            </button>
+            <div class="tool-window"><div class="tool-track"></div></div>
+            <button
+              class="carousel-arrow next"
+              hidden
+              disabled
+              type="button"
+              aria-label="Próxima ferramenta"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+        <a class="glass contact-shortcut" href="#contact"
+          ><span class="card-label" data-i18n="nextStep">O próximo passo</span
+          ><strong data-i18n="together">Vamos construir<br />algo juntos?</strong
+          ><span class="shortcut-bottom"
+            ><span data-i18n="talk">Entre em contato</span
+            ><span class="round-arrow" aria-hidden="true">↗</span></span
+          ></a
+        >
+      </section>
+      <section class="projects-section section" id="projects">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="workLabel">Do aprendizado à aplicação</p>
+            <h2 data-i18n="projectHeading">Projetos selecionados<span>.</span></h2>
+          </div>
+          <p data-i18n="projectIntro">
+            Projetos que desenvolvo nos estudos, em equipe e para clientes.
+          </p>
+        </div>
+        <div class="filters" role="group" aria-label="Filtrar projetos">
+          <button data-filter="all" aria-pressed="true" data-i18n="all">Todos</button
+          ><button data-filter="backend" aria-pressed="false">Backend</button
+          ><button data-filter="fullstack" aria-pressed="false">Full-stack</button
+          ><button data-filter="tool" aria-pressed="false" data-i18n="toolsFilter">
+            Ferramentas</button
+          ><button data-filter="freelance" aria-pressed="false">Freelance</button>
+        </div>
+        <div id="project-grid" class="project-grid"></div>
+        <p id="project-count" class="sr-only" role="status"></p>
+        <a
+          class="text-link github-all"
+          href="https://github.com/LukCandeia"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span data-i18n="allGithub">Mais código no GitHub</span
+          ><span aria-hidden="true">↗</span></a
+        >
+      </section>
+      <section class="about-section section" id="about">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="aboutLabel">Além do código</p>
+            <h2 data-i18n="aboutHeading">Sobre mim<span>.</span></h2>
+          </div>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p class="lead" data-i18n="aboutLead">
+              Gosto de entender o problema antes de abrir o editor.
+            </p>
+            <p data-i18n="aboutCopy">
+              Minha experiência inclui empresa júnior, projetos em equipe na faculdade e sites para
+              profissionais autônomos e microempresas. O trabalho com vendas me ajuda a entender o
+              que cada cliente precisa antes de desenvolver uma solução.
+            </p>
+            <p data-i18n="aboutCopy2">
+              Busco uma oportunidade de estágio ou júnior para trabalhar com backend e aplicar o que
+              estudo em Engenharia de Software.
+            </p>
+            <div class="signature">Lukas Candeia <span aria-hidden="true">↗</span></div>
+          </div>
+          <aside class="glass education-card">
+            <p class="eyebrow" data-i18n="educationLabel">Formação acadêmica</p>
+            <h3 data-i18n="educationTitle">Engenharia de Software</h3>
+            <p class="education-school" data-i18n="educationSchool">PUC · Graduação em andamento</p>
+            <p data-i18n="educationCopy">PUC Coração Eucarístico · 2º período</p>
+          </aside>
+        </div>
+      </section>
+      <section
+        class="section experience-section"
+        id="experience"
+        aria-labelledby="experience-heading"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="experienceLabel">Minha trajetória</p>
+            <h2 id="experience-heading" data-i18n="experienceHeading">
+              Experiências<span>.</span>
+            </h2>
+          </div>
+          <p data-i18n="experienceIntro">
+            Trabalho com clientes, participação em empresa júnior e projetos da faculdade.
+          </p>
+        </div>
+        <div class="experience-list" id="experience-list"></div>
+      </section>
+      <section class="section stack-section" id="stack">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow" data-i18n="stackLabel">Minha caixa de ferramentas</p>
+            <h2 data-i18n="stackHeading">O que uso para construir<span>.</span></h2>
+          </div>
+          <p data-i18n="stackIntro">
+            Tecnologias e práticas que fazem parte dos meus estudos e projetos.
+          </p>
+        </div>
+        <div class="stack-grid" id="stack-grid"></div>
+      </section>
+      <section class="glass contact-section" id="contact">
+        <div>
+          <span class="pill"
+            ><span class="status-dot"></span
+            ><span data-i18n="opportunity">Estágio & júnior</span></span
+          >
+          <h2 data-i18n="contactHeading">Vamos conversar?</h2>
+          <p data-i18n="contactCopy">
+            Estou procurando uma oportunidade de estágio ou júnior. Se quiser conversar sobre uma
+            vaga ou um projeto, pode me escrever por aqui.
+          </p>
+          <div class="contact-actions">
+            <a class="email-address" href="mailto:Lukasnathan62@gmail.com"
+              >Lukasnathan62@gmail.com</a
+            >
+            <div class="contact-links">
+              <a
+                href="https://www.linkedin.com/in/lukascandeia"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn ↗</a
+              ><a href="https://github.com/LukCandeia" target="_blank" rel="noopener noreferrer"
+                >GitHub ↗</a
+              >
+            </div>
+          </div>
+        </div>
+        <form
+          class="contact-form"
+          id="contact-form"
+          aria-label="Formulário de contato"
+          aria-describedby="form-privacy"
+        >
+          <div class="form-row">
+            <label
+              ><span data-extra="name">Nome</span
+              ><input name="name" autocomplete="name" required maxlength="100" /></label
+            ><label
+              ><span data-extra="email">E-mail</span
+              ><input name="email" type="email" autocomplete="email" required maxlength="254"
+            /></label>
+          </div>
+          <label
+            ><span data-extra="message">Mensagem</span
+            ><textarea name="message" rows="5" required maxlength="5000"></textarea>
+          </label>
+          <p class="form-privacy" data-extra="privacy" id="form-privacy">
+            Nome, e-mail e mensagem serão enviados pelo Formspree para que eu possa responder.
+          </p>
+          <button class="button primary form-submit" type="submit" disabled>Enviar mensagem</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+    <footer class="wrap">
+      <span>© 2026 Lukas Candeia</span><span data-i18n="footer">Desenvolvido com JavaScript.</span
+      ><a href="#home"><span data-i18n="backTop">Voltar ao topo</span> ↑</a>
+    </footer>
+    <dialog id="project-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" aria-label="Fechar">×</button>
+      <div id="dialog-content"></div>
+    </dialog>
+    <noscript
+      >Este portfólio usa JavaScript para exibir projetos e alternar idiomas. / This portfolio uses
+      JavaScript to display projects and switch languages.
+      <a href="https://github.com/LukCandeia">GitHub de Lukas Candeia</a></noscript
+    >
+  </body>
+</html>
