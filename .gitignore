@@ -4,3 +4,11 @@ node_modules/
 .env.*
 !.env.example
 artifacts/
+
+# Documentos de trabalho mantidos apenas nesta máquina
+/AGENTS.md
+/docs/PLANO-COMMITS.md
+/docs/ENTREGAS.md
+/docs/PROJETO.md
+/docs/REVISAO.md
+/docs/VALIDACAO.md
