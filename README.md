@@ -26,7 +26,7 @@ Aplicação disponível para execução local. A publicação na nuvem e as capt
 - [Repositório no GitHub](https://github.com/LukCandeia/Portifolio-LukasCandeia)
 - [Wireframes desktop e mobile no Figma](https://www.figma.com/design/XiiwqOVqEPktVu3hyc7EsA/Portif%C3%B3lio-2026?node-id=3-2)
 - [Documentação do formulário](docs/FORMULARIO.md)
-- Site publicado: endereço pendente.
+- Site publicado: [Portifólio.](https://github.com/LukCandeia/Portifolio-LukasCandeia)
 
 ## Funcionalidades
 
