@@ -17,7 +17,7 @@ Use `npm run format:check` para conferir a formatação. Os testes e a verifica�
 
 ## Estado desta entrega
 
-Etapas 1 a 4 registradas. O site está sendo adicionado em partes, seguindo o plano. A navegação interativa entra na etapa 6; carrossel e envio de mensagens entram nas etapas seguintes.
+Etapas 1 a 5 registradas. O site está sendo adicionado em partes, seguindo o plano. A navegação interativa entra na etapa 6; carrossel e envio de mensagens entram nas etapas seguintes.
 
 A foto e as contribuições individuais nos projetos em equipe ainda serão informadas. A hospedagem fica para a próxima entrega.
 

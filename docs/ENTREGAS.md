@@ -18,6 +18,10 @@ Adiciona HTML semântico, seções, formulário inicialmente desabilitado e favi
 
 Adiciona estilos responsivos, temas claro e escuro e status com glassmorphism verde suave. Vincula a folha de estilo ao HTML.
 
+## 5. feat: adicionar conteudo bilingue do portfolio
+
+Adiciona textos PT/EN revisados com Humanizer, sete projetos, experiências, formação e mensagens de interface.
+
 ## Verificação
 
 A árvore local completa passou em `npm run check`, sete testes e `npm run format:check` antes deste lote. Cada etapa selecionada passa por revisão de diff, sintaxe dos módulos e conferência de referências locais antes do commit. Esses resultados não comprovam entrega real de e-mail.
