@@ -1,77 +1,118 @@
-# Portfólio de Lukas Candeia
+# Portfólio | Lukas Candeia
 
-Sou estudante de Engenharia de Software na PUC e busco uma oportunidade de estágio ou júnior, com foco em backend. Este site reúne meus projetos, experiências e contatos em português e inglês.
+<img src="public/favicon.svg" width="64" alt="Monograma Lk">
 
-A página usa HTML, CSS e JavaScript, com temas claro e escuro, composição bento e glassmorphism. Não há dependências de execução nem etapa de build. O Prettier é usado apenas no desenvolvimento.
+Portfólio de Lukas Candeia, estudante de Engenharia de Software na PUC Minas com foco em backend. Reúne projetos acadêmicos, estudos e trabalhos freelance para quem procura conhecer sua trajetória profissional.
 
-## Funcionalidades e decisões
+## Status do projeto
 
-- Página contínua com apresentação, projetos, formação, experiências, tecnologias e contato.
-- Conteúdo em português brasileiro e inglês, com preferência de idioma e tema salva no navegador.
-- Projetos filtrados por categoria, com detalhes em diálogos que podem ser fechados pelo teclado.
-- Layout responsivo, paleta neutra e card de disponibilidade com vidro verde suave.
-- Em implementação: carrossel de ferramentas com setas, botão de pausa e suporte à preferência de movimento reduzido.
-- Estrutura de formulário com nome, e-mail e mensagem. O envio pelo Formspree ainda está em implementação e permanece desabilitado nesta versão.
+Aplicação disponível para execução local. A publicação na nuvem e as capturas dos demais projetos estão pendentes.
 
-HTML, CSS e JavaScript nativos atendem ao escopo sem exigir um framework. A integração de mensagens foi planejada com um serviço externo, dispensando um backend próprio para o portfólio.
+## Índice
 
-Os controles do carrossel ficam ocultos até sua integração. Os links de e-mail, LinkedIn e GitHub estão disponíveis para contato.
+- [Links úteis](#links-úteis)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias utilizadas](#tecnologias-utilizadas)
+- [Arquitetura](#arquitetura)
+- [Instalação e execução](#instalação-e-execução)
+- [Deploy](#deploy)
+- [Estrutura de pastas](#estrutura-de-pastas)
+- [Demonstração](#demonstração)
+- [Testes](#testes)
+- [Fontes e autoria](#fontes-e-autoria)
 
-## Executar localmente
+## Links úteis
 
-Requer Node.js 22 ou superior.
+- [Repositório no GitHub](https://github.com/LukCandeia/Portifolio-LukasCandeia)
+- [Wireframes desktop e mobile no Figma](https://www.figma.com/design/XiiwqOVqEPktVu3hyc7EsA/Portif%C3%B3lio-2026?node-id=3-2)
+- [Documentação do formulário](docs/FORMULARIO.md)
+- Site publicado: endereço pendente.
+
+## Funcionalidades
+
+- Página responsiva em português brasileiro e inglês, com temas claro e escuro.
+- Seções de apresentação, projetos, experiências, ferramentas e contato.
+- Linha do tempo filtrável. Os projetos com mês confirmado aparecem em ordem de início. Os demais ficam agrupados pelo ano.
+- Cards com tecnologias, detalhes e links para o GitHub.
+- Contato por e-mail, WhatsApp, LinkedIn e GitHub. O formulário valida nome, e-mail e mensagem antes de enviar os dados ao Formspree.
+
+## Tecnologias utilizadas
+
+| Dependência                 | Uso                                                             |
+| --------------------------- | --------------------------------------------------------------- |
+| React e React DOM           | Componentes, estado e renderização no navegador                 |
+| Vite e @vitejs/plugin-react | Servidor de desenvolvimento e build                             |
+| Prettier                    | Formatação                                                      |
+| JavaScript, HTML e CSS      | Lógica, estrutura e apresentação                                |
+| Node.js e npm               | Ferramentas de desenvolvimento e execução dos testes            |
+| Formspree                   | Recebimento dos dados do formulário e encaminhamento por e-mail |
+
+As versões instaladas constam no package-lock.json. O layout usa CSS próprio, com a grade bento na apresentação e os cartões translúcidos nos dois temas.
+
+## Arquitetura
+
+O Vite gera HTML, CSS e JavaScript estáticos. O React renderiza as seções a partir dos dados locais. As preferências de tema e idioma ficam no navegador. O formulário faz uma requisição HTTPS ao Formspree, serviço responsável pelo envio ao destinatário configurado.
+
+```mermaid
+flowchart LR
+  Site[Hospedagem estática] --> Browser[Navegador / React]
+  Browser -->|Dados do formulário| Formspree
+  Formspree --> Email[Caixa de e-mail]
+```
+
+## Instalação e execução
+
+Instale Node.js 22.12 ou superior e npm. Na raiz do repositório, execute:
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Abra [a prévia local](http://127.0.0.1:5173/). Para outra porta, defina a variável `PORT`. O servidor aceita conexões apenas na própria máquina e serve os arquivos da página, de `src` e de `public`.
+Abra o endereço mostrado pelo Vite. A configuração pública do formulário fica em src/config.js.
 
-## Verificar alterações
+## Deploy
 
-```sh
-npm run format:check
+Execute npm run build e publique o diretório dist em uma hospedagem estática. Para conferir o build localmente, execute npm run preview após a compilação. Atualize o link em **Links úteis** quando o endereço público for verificado.
+
+## Estrutura de pastas
+
+```text
+.
+├── docs/                   Fontes e integração de contato
+├── public/                 Ícone e capturas dos projetos
+├── src/
+│   ├── components/         Timeline, carrossel e contato
+│   ├── App.jsx             Seções e preferências
+│   ├── main.jsx            Inicialização do React
+│   ├── content.js          Textos da página
+│   ├── ui-copy.js          Textos dos controles e do formulário
+│   ├── projects.js         Dados e links dos projetos
+│   ├── timeline.js         Agrupamento cronológico
+│   ├── contact.js          Requisição ao Formspree
+│   └── styles.css          Layout, temas e estados de interação
+├── tests/                  Testes de conteúdo, timeline e contato
+├── index.html
+└── vite.config.js
 ```
 
-O comando confere a formatação. Use `npm run format` para aplicá-la. Os testes automatizados e o comando de verificação completa de sintaxe ainda serão incorporados ao repositório.
+## Demonstração
 
-A formatação não substitui o teste no navegador. Antes de publicar ou alterar uma funcionalidade, confira:
+A tela do Notaê no Obsidian é uma captura do projeto em uso. Fonte: [README do Notaê](https://github.com/LukCandeia/Notae#demonstração).
 
-1. Troca de idioma e tema, inclusive após recarregar a página.
-2. Filtros de projetos, contador e abertura dos detalhes; Escape deve fechar o diálogo e devolver o foco ao botão de origem.
-3. Navegação por teclado e leitura em telas pequenas, nos dois temas e idiomas.
-4. Após integrar o carrossel, pausa e setas, inclusive com movimento reduzido ativado.
-5. Após integrar o envio, campos vazios, espaços e e-mail inválido no formulário. Em falhas de envio, o conteúdo deve ser preservado.
+![Tela inicial do Notaê no Obsidian](public/projects/notae.png)
 
-O recebimento de e-mail, o funcionamento dos projetos externos e o comportamento em um celular real precisam de verificação própria. Após configurar a hospedagem, confira os caminhos dos recursos e o envio de uma mensagem de teste.
+## Testes
 
-## Onde editar
+```sh
+npm run check
+```
 
-| Arquivo              | Responsabilidade                                       |
-| -------------------- | ------------------------------------------------------ |
-| `index.html`         | Estrutura da página, navegação e formulário            |
-| `src/content.js`     | Textos PT/EN, experiências, tecnologias e projetos     |
-| `src/ui-copy.js`     | Textos dos controles, status e mensagens do formulário |
-| `src/app.js`         | Idioma, tema, filtros e detalhes dos projetos          |
-| `src/styles.css`     | Layout, temas e adaptações para telas menores          |
-| `public/favicon.svg` | Monograma Lk                                           |
-| `scripts/serve.js`   | Servidor de desenvolvimento local                      |
+O comando roda os testes do Node.js e gera o build de produção. Os testes do formulário simulam respostas do serviço. A entrega na caixa de e-mail precisa ser conferida com um envio real.
 
-Ao editar textos, atualize os dois idiomas. As artes dos projetos são desenhos em CSS, não capturas das aplicações. A foto pessoal ainda será escolhida; o monograma ocupa esse espaço.
+## Fontes e autoria
 
-## Contato e preferências
-
-O envio pelo Formspree ainda está em implementação. Enquanto o formulário estiver desabilitado, use os links de contato. O comportamento previsto e a configuração estão em [Formulário](docs/FORMULARIO.md).
-
-A configuração usará um endpoint público e um destinatário definido no painel do Formspree. Senhas e chaves administrativas não devem entrar no código.
-
-Tema e idioma ficam salvos no navegador. A página continua funcionando se o armazenamento estiver indisponível. As fontes DM Sans e Manrope são carregadas pelo Google Fonts, com alternativa local sans-serif. Não há analytics.
-
-## Publicação
-
-O [repositório oficial](https://github.com/LukCandeia/Portifolio-LukasCandeia) guarda o código e a documentação técnica.
-
-O site pode ser hospedado como arquivos estáticos. A publicação deve incluir `index.html`, `src/` e `public/`, preservando os caminhos relativos. O servidor em `scripts/serve.js` é destinado ao desenvolvimento local. A hospedagem ainda não está configurada.
-
-As fontes das descrições dos projetos estão em [Fontes](docs/FONTES.md). As participações individuais nos projetos em equipe ainda serão detalhadas.
+- [Fontes das descrições dos projetos](docs/FONTES.md)
+- [Modelo de README do professor João Paulo Aramuni](https://github.com/joaopauloaramuni/desenvolvimento-e-integracao-de-aplicacoes-web/blob/main/TEMPLATES/template_README.md)
+- [Documentação do React](https://react.dev/), [Vite](https://vite.dev/) e [Formspree](https://help.formspree.io/)
+- Lukas Candeia • [GitHub](https://github.com/LukCandeia) • [LinkedIn](https://www.linkedin.com/in/lukascandeia)
