@@ -1,6 +1,6 @@
 # Plano de 12 commits
 
-Execução das etapas 1 a 6 autorizada explicitamente por Lukas em 21/11/2026. As etapas 7 a 12 ficam para 22/11/2026. O andamento está em [Registro das entregas](ENTREGAS.md).
+Etapas 1 a 6 registradas no lote de 21/11/2026, autorizado explicitamente por Lukas. As etapas 7 a 12 ficam para 22/11/2026. O andamento está em [Registro das entregas](ENTREGAS.md).
 
 ## Skills por etapa
 
