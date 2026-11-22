@@ -14,6 +14,10 @@ Adiciona servidor local, Prettier com versão fixa e lockfile. Scripts de teste 
 
 Adiciona HTML semântico, seções, formulário inicialmente desabilitado e favicon Lk. CSS e JavaScript serão vinculados quando seus arquivos entrarem no histórico.
 
+## 4. style: aplicar bento e temas com glassmorphism
+
+Adiciona estilos responsivos, temas claro e escuro e status com glassmorphism verde suave. Vincula a folha de estilo ao HTML.
+
 ## Verificação
 
 A árvore local completa passou em `npm run check`, sete testes e `npm run format:check` antes deste lote. Cada etapa selecionada passa por revisão de diff, sintaxe dos módulos e conferência de referências locais antes do commit. Esses resultados não comprovam entrega real de e-mail.
