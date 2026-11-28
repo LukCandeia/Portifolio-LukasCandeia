@@ -1,3 +1,4 @@
+import { PortfolioIcon } from './components/PortfolioIcon.jsx';
 import { useEffect, useState } from 'react';
 import { copy } from './content.js';
 import { uiCopy } from './ui-copy.js';
@@ -49,7 +50,10 @@ export default function App() {
       <header className="header wrap">
         <a className="brand" href="#home" aria-label="Lukas Candeia">
           <span className="brand-symbol">
-            Lk<span>↗</span>
+            Lk
+            <span>
+              <PortfolioIcon />
+            </span>
           </span>
           <span>
             Lukas Candeia<span className="brand-sub">{t.portfolio}</span>
@@ -108,7 +112,9 @@ export default function App() {
             <div className="intro-bottom">
               <a className="button primary" href="#projects">
                 {t.viewProjects}
-                <span aria-hidden="true">↗</span>
+                <span aria-hidden="true">
+                  <PortfolioIcon />
+                </span>
               </a>
               <span className="small">{t.opportunity}</span>
             </div>
@@ -116,7 +122,9 @@ export default function App() {
           <div className="glass identity">
             <div className="identity-top">
               <span>{t.inProgress}</span>
-              <span aria-hidden="true">✳</span>
+              <span aria-hidden="true">
+                <PortfolioIcon kind="spark" />
+              </span>
             </div>
             <div className="monogram" aria-hidden="true">
               Lk<span>.</span>
@@ -140,7 +148,7 @@ export default function App() {
             <span className="shortcut-bottom">
               {t.talk}
               <span className="round-arrow" aria-hidden="true">
-                ↗
+                <PortfolioIcon />
               </span>
             </span>
           </a>
@@ -159,7 +167,10 @@ export default function App() {
               <p>{t.aboutCopy}</p>
               <p>{t.aboutCopy2}</p>
               <div className="signature">
-                Lukas Candeia <span aria-hidden="true">↗</span>
+                Lukas Candeia{' '}
+                <span aria-hidden="true">
+                  <PortfolioIcon />
+                </span>
               </div>
             </div>
             <aside className="glass education-card">
@@ -185,7 +196,7 @@ export default function App() {
             {t.experience.slice(0, 4).map(([title, description], index) => (
               <article key={index}>
                 <span className="experience-icon" aria-hidden="true">
-                  ↗
+                  <PortfolioIcon />
                 </span>
                 <div>
                   <p className="experience-meta">
@@ -233,7 +244,9 @@ export default function App() {
       <footer className="wrap">
         <span>© 2026 Lukas Candeia</span>
         <span>{t.footer}</span>
-        <a href="#home">{t.backTop} ↑</a>
+        <a href="#home">
+          {t.backTop} <PortfolioIcon kind="up" />
+        </a>
       </footer>
     </>
   );

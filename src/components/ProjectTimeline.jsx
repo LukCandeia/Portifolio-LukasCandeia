@@ -1,3 +1,4 @@
+import { PortfolioIcon } from './PortfolioIcon.jsx';
 import { useEffect, useRef, useState } from 'react';
 import { projects } from '../projects.js';
 import { groupProjects, monthLabel } from '../timeline.js';
@@ -60,7 +61,9 @@ function ProjectDialog({ project, language, text, onClose }) {
         <Tags project={project} language={language} />
         <a className="button primary" href={project.url} target="_blank" rel="noopener noreferrer">
           {text.repo}
-          <span aria-hidden="true">↗</span>
+          <span aria-hidden="true">
+            <PortfolioIcon />
+          </span>
         </a>
         <p className="source-note">{text.sourceNote}</p>
       </div>
@@ -135,7 +138,7 @@ export function ProjectTimeline({ language, text }) {
                         </>
                       )}
                       <span className="art-open" aria-hidden="true">
-                        ↗
+                        <PortfolioIcon />
                       </span>
                     </button>
                     <div className="project-body">
@@ -159,7 +162,9 @@ export function ProjectTimeline({ language, text }) {
                           onClick={() => setSelected(project)}
                         >
                           {text.details}
-                          <span aria-hidden="true">↗</span>
+                          <span aria-hidden="true">
+                            <PortfolioIcon />
+                          </span>
                         </button>
                         <a
                           className="text-link"
@@ -168,7 +173,7 @@ export function ProjectTimeline({ language, text }) {
                           rel="noopener noreferrer"
                           aria-label={`${text.repo}: ${item.title}`}
                         >
-                          GitHub ↗
+                          GitHub <PortfolioIcon />
                         </a>
                       </div>
                     </div>
@@ -189,7 +194,9 @@ export function ProjectTimeline({ language, text }) {
         rel="noopener noreferrer"
       >
         {text.allGithub}
-        <span aria-hidden="true">↗</span>
+        <span aria-hidden="true">
+          <PortfolioIcon />
+        </span>
       </a>
       {selected && (
         <ProjectDialog
